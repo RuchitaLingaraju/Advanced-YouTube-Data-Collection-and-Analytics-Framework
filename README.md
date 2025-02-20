@@ -46,10 +46,26 @@ pip install pandas numpy matplotlib seaborn
 │── 📄 YouTube Data Analysis Report.pdf  # Research Report
 ```
 
+
 ---
 
 ## 🚀 **How to Run the Project**
-### 1️⃣ **Clone the Repository**
+### 1️⃣ **Set Up YouTube Data Collection**
+To collect trending YouTube video data, follow these steps to set up the **YouTube Data API v3**:
+
+1. Go to **[Google Cloud Console](https://console.cloud.google.com/)**.
+2. Click on the project drop-down at the top and select **"New Project"**.
+3. Enter a **Project Name** and click **"Create"**.
+4. Navigate to **“APIs & Services” > “Library”**.
+5. Search for **"YouTube Data API v3"** and click on it.
+6. Click **"Enable"**.
+7. Go to **“APIs & Services” > “Credentials”**.
+8. Click **"+ CREATE CREDENTIALS"** and select **"API key"**.
+9. Copy the **generated API key** for later use in the project.
+
+---
+
+### 2️⃣ **Clone the Repository**
 To run the project locally, use the following command:
 
 ```sh
@@ -57,21 +73,39 @@ git clone https://github.com/your-username/YouTube-Data-Analysis.git
 cd YouTube-Data-Analysis
 ```
 
-### 2️⃣ **Install Dependencies**
+---
+
+### 3️⃣ **Install Dependencies**
 Ensure that all required libraries are installed:
 
 ```sh
-pip install pandas numpy matplotlib seaborn
+pip install pandas numpy matplotlib seaborn google-auth google-auth-oauthlib google-auth-httplib2 googleapiclient
 ```
 
-### 3️⃣ **Run the Jupyter Notebook**
+---
+
+### 4️⃣ **Set Up API Key in the Script**
+1. Open the project in a **code editor (VS Code, PyCharm, Jupyter, etc.)**.
+2. Locate the script or Jupyter Notebook file (**YouTube_Data_Analysis.ipynb** or `data_collection.py`).
+3. Find the placeholder for the API key and replace it with your **generated API key**:
+
+   ```python
+   API_KEY = "your_api_key_here"
+   ```
+
+---
+
+### 5️⃣ **Run the Jupyter Notebook**
 Launch Jupyter Notebook and open **YouTube_Data_Analysis.ipynb**:
 
 ```sh
 jupyter notebook
 ```
 
+Execute the code cells sequentially to **fetch, clean, and analyze** the trending video data.
+
 ---
+
 
 ## 📌 **Exploratory Data Analysis (EDA) Methods**
 ### **1️⃣ View Count Analysis**
